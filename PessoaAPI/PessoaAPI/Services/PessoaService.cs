@@ -19,7 +19,7 @@ namespace PessoaAPI.Services
             var pessoas = _pessoaRepository.GetPessoa();
             pessoas.ForEach(pessoa =>
             {
-               pessoa.Nome = ExtensionMethods.CaixaAltaPrimeiraLetra(pessoa.Nome);
+                pessoa.Nome = pessoa.Nome.CaixaAltaPrimeiraLetra();
             });
             return pessoas;
         }
