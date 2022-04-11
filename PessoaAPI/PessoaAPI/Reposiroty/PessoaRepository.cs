@@ -12,7 +12,7 @@ namespace PessoaAPI.Reposiroty
                 new PessoaModel()
                 {
                     Id = 1,
-                    Nome ="Samuel",
+                    Nome ="Samuel rodrigues",
                     Telefone = "11999999999",
                 },
                 new PessoaModel()

@@ -25,7 +25,7 @@ namespace PessoaAPI.Controllers
         [HttpGet("GetAll")]
         public List<PessoaModel> GetAll([FromServices] IPessoaService _pessoaService)
         {
-            return _pessoaService.GetPessoa();
+            return _pessoaService.GetAll();
         }
 
         [HttpGet("GetId")]

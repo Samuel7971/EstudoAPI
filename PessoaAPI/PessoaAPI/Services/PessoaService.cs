@@ -14,9 +14,14 @@ namespace PessoaAPI.Services
             _pessoaRepository = pessoaRepository;
         }
 
-        public List<PessoaModel> GetPessoa()
+        public List<PessoaModel> GetAll()
         {
-            return _pessoaRepository.GetPessoa();
+            var pessoas = _pessoaRepository.GetPessoa();
+            pessoas.ForEach(pessoa =>
+            {
+               pessoa.Nome = ExtensionMethods.CaixaAltaPrimeiraLetra(pessoa.Nome);
+            });
+            return pessoas;
         }
 
         public PessoaModel GetById(int id)

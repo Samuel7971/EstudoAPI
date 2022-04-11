@@ -5,7 +5,7 @@ namespace PessoaAPI.Services
 {
     public interface IPessoaService
     {
-        List<PessoaModel> GetPessoa();
+        List<PessoaModel> GetAll();
         PessoaModel GetById(int id);
     }
 }
