@@ -28,7 +28,6 @@ namespace PessoaAPI.Services
         {
             var pessoas = _pessoaRepository.GetPessoa();
             var pessoaId = (from p in pessoas where p.Id == id select p).FirstOrDefault();
-           // var pe = pessoas.Where(x => x.Id == id).Select(x => x).FirstOrDefault();
             return pessoaId;
         }
     }
